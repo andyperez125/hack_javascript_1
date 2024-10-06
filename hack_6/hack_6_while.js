@@ -3,12 +3,18 @@
  * debes anexar los caracteres de string al array result
  * ["f","o","o","z","i","m","a","n"] 
  *
- *
  * output => ["f","o","o","z","i","m","a","n"]
  */
+
+
 let str = "fooziman";
 let result = [];
 
+let i = 0;
+while (i < str.length) {
+    result.push(str[i]); // Agrega cada carácter al array result
+    i++; // Incrementa el índice
+}
 
-//export result
+// Exporta el array result
 module.exports = result;

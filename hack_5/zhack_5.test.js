@@ -78,4 +78,4 @@ describe("HACKS-5", () => {
     test(HACK_5_MAP, () => {
         expect(hackMap).toBeEqualHackMap();
     });
-});
+}); 

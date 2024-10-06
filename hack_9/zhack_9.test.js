@@ -38,4 +38,4 @@ describe("HACK-9", () => {
     test(HACK_9, () => {
         expect(hack).toBeEqualHack();
     });
-});
+}); 

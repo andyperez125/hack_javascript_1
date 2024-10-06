@@ -12,13 +12,37 @@
  * echo => 3ch0
  * 3) anexar al inicio, al final y entre la unión de los array el string "h@ck"
  * 
- * 
  * output => ["h@ck","one",2,"three",4,"five","h@ck","f00","Bar","b@z","quX","3ch0","h@ck"]   
  */
-let numberArray = [1,2,3,4,5];
-let stringArray = ["foo","bar","baz","qux","echo"]
+
+
+let numberArray = [1, 2, 3, 4, 5];
+let stringArray = ["foo", "bar", "baz", "qux", "echo"];
 let result = [];
 
+// Modificamos los elementos del array de números
+let modifiedNumbers = numberArray.map(num => {
+    if (num === 1) return "one";
+    if (num === 3) return "three";
+    if (num === 5) return "five";
+    return num; // Devolver el número si no es 1, 3 o 5
+});
 
-//export result
+// Modificamos los elementos del array de strings
+let modifiedStrings = stringArray.map(str => {
+    if (str === "foo") return "f00";
+    if (str === "bar") return "Bar";
+    if (str === "baz") return "b@z";
+    if (str === "qux") return "quX";
+    if (str === "echo") return "3ch0";
+});
+
+// Anexamos "h@ck" al inicio, entre los arrays y al final
+result.push("h@ck");
+result = result.concat(modifiedNumbers);
+result.push("h@ck");
+result = result.concat(modifiedStrings);
+result.push("h@ck");
+
+// export result
 module.exports = result;

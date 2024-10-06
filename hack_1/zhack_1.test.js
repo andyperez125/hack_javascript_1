@@ -58,4 +58,4 @@ describe("HACKS-1", () => {
     test(HACK_1_WHILE, () => {
         expect(hackWhile).toBeEqualHackWhile();
     });
-});
+}); 
